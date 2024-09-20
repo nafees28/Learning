@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="Body">
+
+
+    <div class="main">
+        <div class="Section1">
+            <h1 style="font-weight: 800;">Tasbeeh <img width="100px" height="70px" src="./Caligrapyh/3d-ramadan-islamic-element-icon-tasbih-png.webp" alt=""></h1>
+            <div class="button">
+                <button onclick="Dashboard_view()" class="BtnHover2">Dashboard <img
+                        style="width: 55px; padding-bottom: 15px;" src="./Caligrapyh/dashboard-solid-24 (1).png"
+                        alt=""></button>
+                <button onclick="ViewSubhanallah()" class="BtnHover"> <img style="width:50px; "
+                        src="./Caligrapyh/islamic.png" alt=""> سُـبْحانَ
+                    الله</button>
+                <button class="BtnHover" onclick="Viewalham()"><img style="width:50px" src="./Caligrapyh/prayer.png"
+                        alt="">ٱلْحَمْدُ
+                    لِلّٰهِ</button>
+                <button class="BtnHover" onclick=" ViewaLailaha()"><img style="width:50px" src="./Caligrapyh/dua.png"
+                        alt="">لَا إِلَٰهَ إِلَّا
+                    ٱللَّٰهُ مُحَمَّدٌ رَسُولُ ٱللَّٰهِ</button>
+                <button class="BtnHover" onclick=" Viewadurod()"><img style="width:50px" src="./Caligrapyh/shalat.png"
+                        alt="">صَلَّى اللّٰهُ
+                    عَلَيْهِ وَسَلَّمَ</button>
+
+            </div>
+            <button id="Login" type="button" class="login" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat">
+                <img style="width: 50px;" src="./Caligrapyh/th-removebg-preview.png" alt=""> Login</button>
+            </div>
+            <h1 id="name_user">sas</h1>
+
+
+        <div class="Section2" id="Section2">
+            <div class="dashboard  " id="Dashboard">
+                <div class="subhanallah_Dashboard" id="subhanallah_Dashboard">
+                    <img width="300px" src="./Caligrapyh/Sub-removebg-preview.png" alt="">
+                    <div class="Count">
+                        <p>Count :</p>
+                        <p id="SubhanallahDashoard_value"></p>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="Alhamdulillah_Dashboard" id="Alhamdulillah_Dashboard">
+                    <img width="250px" height="150px" src="./Caligrapyh/Al-removebg-preview.png" alt="">
+                    <div class="Count">
+                        <p>Count :</p>
+                        <p id="Alhamdulillah_value"></p>
+                    </div>
+
+                </div>
+
+
+
+                <div class="Lailaha_Dashboard" id="Lailaha_Dashboard">
+                    <img width="300px" height="210px" src="./Caligrapyh/La.png" alt="">
+                    <div class="Count">
+                        <p>Count :</p>
+                        <p id="Lailaha_value"></p>
+                    </div>
+
+                </div>
+
+
+
+                <div class="Durod_Dashboard" id="Durod_Dashboard">
+                    <img width="300px" height="210px" src="./Caligrapyh/Sal.png" alt="">
+                    <div class="Count">
+                        <p>Count :</p>
+                        <p id="Durod_value"></p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="Subhanallah_link d-none" id="Subhanallah_link">
+                <div class="Round">
+                    <img src="./Caligrapyh/Sub-removebg-preview.png" width="500px" alt="">
+                    <h2 id="Subhanallah_Counter_value">0</h2>
+                    <div class="btn_link">
+                        <button onclick="AddSubhanallah()">+</button>
+                        <button onclick="MinusSubhanallah()">-</button>
+                        <button onclick="Subhanallah_count_Save()">Save</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="Alhamdulillah_link d-none" id="Alhamdulillah_link">
+                <div class="Round">
+                    <img src="./Caligrapyh/Al-removebg-preview.png" width="250px" alt="">
+                    <h2 id="Alhamdulillah_Counter_value">0</h2>
+                    <div class="btn_link">
+                        <button onclick="AddAlhamdulillah()">+</button>
+                        <button onclick="MinusAlhamdulillah()">-</button>
+                        <button onclick="Alhamdulillah_count_Save()">Save</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="Lailaha_link d-none" id="Lailaha_link">
+                <div class="Round">
+                    <img src="./Caligrapyh/La.png" width="500px" height="250px" alt="">
+                    <h2 id="Lailaha_Counter_value">0</h2>
+                    <div class="btn_link">
+                        <button onclick="AddLailaha()">+</button>
+                        <button onclick="MinusLailaha()">-</button>
+                        <button onclick="Lailaha_Save()">Save</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="Durod_link d-none" id="Durod_link">
+                <div class="Round">
+                    <img src="./Caligrapyh/Sal.png" width="360px" alt="">
+                    <h2 id="durod_Counter_value">0</h2>
+                    <div class="btn_link">
+                        <button onclick="AddDurod()">+</button>
+                        <button onclick="MinusDurod()">-</button>
+                        <button onclick="Durod_Save()">Save</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Modal -->
+
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h5 class="modal-title" id="exampleModalLabel">Login & Rigister</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Email:</label>
+                            <input type="email" class="form-control" id="email">
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">User Name:</label>
+                            <input type="text" class="form-control" id="userName">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-form-label">Password:</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="CloseBtn">Close</button>
+                <button type="button" onclick="signIn()" class="btn btn-primary">Login</button>
+                <button type="button" onclick="signUp()" class="btn btn-primary">Rigister</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Modal -->
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

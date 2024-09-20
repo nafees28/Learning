@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main{
+    display: flex;
+}
+.Section1{
+    background-color: #47E1F4;
+    width:800px;
+    width: 35vw;
+    height: 99.5vh;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-left:5px;
+    text-align: center;
+    box-shadow: 5px 5px 15px 5px #01867D;
+
+    }
+.Section1 h1{
+    color: black;
+}
+.button button{
+    background-color: #01867D;
+    border: none;
+    width: 90%;
+    height: 60px;
+    text-align: center;
+    gap: 40px;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px 5px #00564B;
+    display: flex;  
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-weight: 600;
+
+}
+.button{
+    border-top: 5px solid #01867D;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 32px;
+    flex-direction: column;
+gap: 22px;
+border-bottom: 5px solid #01867D;
+}
+.login{
+    background-color: #01867D;
+    border: none;
+    width: 90%;
+    height: 60px;
+    justify-content: center;
+    margin: auto;
+    border-radius: 20px;
+    font-size: 40px;
+margin-top: 20px;
+box-shadow: 5px 5px 15px 5px #00564B;
+display: flex ;
+
+
+}
+.BtnHover:hover{
+    transform: translate(0, -5px);
+    border: 1 px solid black;
+}
+.BtnHover2:hover{
+    transform: translate(0, -5px);
+    border: 1 px solid black;
+}
+.login:hover{
+    transform: translate(0, -5px);
+    border: 1 px solid black;
+}
+.Count{
+    display: flex;
+    gap: 50px;
+    font-size: 40px;
+    color: black;
+    font-weight: 700;
+}
+.subhanallah_Dashboard{
+    text-align: center;
+    background-color: #47E1F4;
+    border-top-right-radius: 20px ;
+    border-bottom-right-radius: 20px ;
+    height: 290px;
+    margin: 20px 20px;
+    box-shadow: 5px 5px 15px 5px #00564B;
+
+padding: 20px;}
+.Alhamdulillah_Dashboard{
+    text-align: center;
+    background-color: #47E1F4;
+    border-top-left-radius: 20px ;
+    border-bottom-left-radius: 20px ;
+    height: 290x;
+    box-shadow: 5px 5px 15px 5px #00564B;
+
+    margin: 20px 20px;
+    width: 342px;
+padding: 20px;}
+.Lailaha_Dashboard{
+    text-align: center;
+    background-color: #47E1F4;
+    border-top-right-radius: 20px ;
+    border-bottom-right-radius: 20px ;
+    box-shadow: 5px 5px 15px 5px #00564B;
+
+    height: 290px;
+    margin: 20px 20px;
+padding: 20px;}
+
+
+.Durod_Dashboard{
+    text-align: center;
+    background-color: #47E1F4;
+    border-top-left-radius: 20px ;
+    border-bottom-left-radius: 20px ;
+    height: 290px;
+    box-shadow: 5px 5px 15px 5px #00564B;
+
+    margin: 20px 20px;
+padding: 20px;}
+.dashboard{
+    flex-wrap: wrap;
+    display: flex;
+    width:65vw;
+    justify-content: space-between;
+}
+.Round{
+    background-color: #47E1F4;
+    width: 500px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px 5px #00564B;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    text-align: center  ;
+    align-items: center;
+    flex-direction: column;
+}
+.Round h2 {
+    font-size: 80px ;
+}
+.Section2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+.btn_link button{
+    border: none;
+    width: 100px;
+    height: 50px;
+    font-size: 35px;
+    background-color:#00564B ;
+    border-radius: 15px;
+}
+.btn_link{
+    margin-bottom: 30px;
+    
+}
+.BtnHover img{
+    margin-bottom: 20px;
+}
